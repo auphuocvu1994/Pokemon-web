@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import { useRoutes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./page/Home";
+import Detail from "./page/Detail";
+import Mybag from "./page/MyBag";
 
-function App() {
+export default function App() {
+
+  const routers = [
+    {
+      path: "/",
+      element: <Home />,
+      private: false,
+    },
+    {
+      path: "/pokemon/detail/:id",
+      element: <Detail />,
+      private: false,
+    },
+    {
+      path: "/pokemon/mybag",
+      element: <Mybag />,
+      private: false,
+    },
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      {routers.map((route, index) => (
+        <Route
+          key={index}
+          path={route.path}
+          element={
+            route.element
+          }
+        />
+      ))}
+    </Routes>
   );
 }
-
-export default App;
