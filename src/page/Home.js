@@ -24,10 +24,10 @@ export default function Home() {
         <BackpackIcon color="primary" /> Mybag
       </IconButton>
 
-      <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+      <List className='ul_style' sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
         {tableData.map((item) => (
           // <li  key={item.id}>
-            <ItemDetail key={item.id} itemDetail={item}></ItemDetail>
+            <ItemDetail key={item.name} itemDetail={item}></ItemDetail>
           // </li>
         ))}
       </List>

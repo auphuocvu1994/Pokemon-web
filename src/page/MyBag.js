@@ -8,7 +8,6 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import ImageListItem from '@mui/material/ImageListItem';
-import ImageListItemBar from '@mui/material/ImageListItemBar';
 import IconButton from '@mui/material/IconButton';
 import Avatar from '@mui/material/Avatar';
 import { grey } from '@mui/material/colors';
@@ -55,12 +54,6 @@ export default function Home() {
               </TableCell>
               <TableCell align="right"><ImageListItem sx={{ width: 96, height: 96 }} key={rows.id}>
                 <Avatar sx={{ bgcolor: grey['300'], width: 56, height: 56 }} alt={row.detailItem.image} src={row.detailItem.image} />
-                {/* <img
-                  src={row.detailItem.image}
-                  alt={row.detailItem.image}
-                  loading="lazy"
-                /> */}
-                <ImageListItemBar position="below" />
               </ImageListItem></TableCell>
               <TableCell align="right">{row.detailItem.height}</TableCell>
               <TableCell align="right">{row.detailItem.weight}</TableCell>
