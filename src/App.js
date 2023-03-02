@@ -1,5 +1,4 @@
-import { useRoutes } from "react-router-dom";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Home from "./page/Home";
 import Detail from "./page/Detail";
 import Mybag from "./page/MyBag";
